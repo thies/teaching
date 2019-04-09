@@ -10,9 +10,8 @@ addresses <- read.csv("addresses.csv", as.is=TRUE, header=FALSE)
 coords <- list()
 for(addr in addresses[,1]){
   url <- paste( api.url, "?address=", URLencode(addr), "&key=", api.key, sep="")
-  print(url)
-  tmp <- fromJSON( getURL(url) )
-  for(res in tmp$results){
+  json <- fromJSON( getURL(url) )
+  for(res in json$results){
     coords[[ length(coords)+1 ]] <- list( addr, res$geometry$location$lat, res$geometry$location$lng)  
   }
 }
