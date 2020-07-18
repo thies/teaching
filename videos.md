@@ -56,3 +56,6 @@ ffmpeg -f lavfi -i aevalsrc=0 -i final.mp4 -c:v copy -c:a aac -map 0 -map 1:v -s
 ffmpeg -i titlepage_audio.mp4 -i Q1_rescaled.mp4 -i Q2_audio.mp4 -i Q2_rescaled.mp4 -i Q3_audio.mp4 -i Q3_rescaled.mp4 -i Q4_audio.mp4 -i image_audio.mp4 -i Q5_audio.mp4 -i Q5_rescaled.mp4 -i final_audio.mp4 \
 -filter_complex "[0:v] [0:a] [1:v] [1:a] [2:v] [2:a] [3:v] [3:a] [4:v] [4:a] [5:v] [5:a] [6:v] [6:a] [7:v] [7:a] [8:v] [8:a] [9:v] [9:a] [10:v] [10:a]  concat=n=11:v=1:a=1 [v] [a]"  -map "[v]" -map "[a]" clip.mp4
 ```
+
+### Good website on "filter_complex"
+https://dev.to/dak425/concatenate-videos-together-using-ffmpeg-2gg1
