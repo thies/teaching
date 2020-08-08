@@ -2,6 +2,16 @@
 
 Some command line tricks that I always forget
 
+Cut with recoding
+```
+ffmpeg -i movie.mp4 -ss 00:00:03 -t 00:00:08 -async 1 cut.mp4
+```
+copy
+
+```
+ffmpeg -ss 00:01:00 -i input.mp4 -to 00:02:00 -c copy output.mp4
+```
+
 ## Get height and width of video
 
 ```
