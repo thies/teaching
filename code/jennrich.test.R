@@ -9,6 +9,8 @@ library(psych)
 # either estimate them in , or enter the estimates from Excel/eviews/Matlab/...
 a <- matrix( c(1,0.5,0,0.5,1,0.5,0,0.5,1) , nrow = 3, ncol = 3)
 b <- matrix( c(1,0.4,0.1,0.4,1,0.4,0.1,0.4,1) , nrow = 3, ncol = 3)
+c <- matrix( c(1,0.1,0.4,0.1,1,0.1,0.4,0.1,1) , nrow = 3, ncol = 3)
+
 # inspect the matrices
 print(a)
 print(b)
