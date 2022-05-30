@@ -11,3 +11,8 @@ sudo docker run --rm -t -v `pwd`:/slides astefanutti/decktape https://lindenthal
 # make PDFs a bit smaller
 ps2pdf large.pdf small.pdf
 ```
+
+## manual classification of images
+```
+feh -Z --recursive --action1 "mv '%f' ./like/" --action2 "mv '%f' ./dislike/" --action3 "mv '%f' ./delete/"  house/*.jpg &
+```
